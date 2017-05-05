@@ -1,0 +1,634 @@
+body{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+@keyframes music{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#musicbtn{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    animation: music 3s infinite linear;
+    z-index: 100;
+    width: 10%;
+}
+@keyframes btn{
+    0%{
+        left: 100%;
+        opacity: 0;
+    }
+    50%{
+        left: 90%;
+        opacity: 1
+    }
+    100%{
+        left:85%;
+        opacity: 0; 
+    }
+}
+#button{
+    opacity: 0.5;
+    position: fixed;
+    left: 90%;
+    animation: btn 1000ms infinite;
+}
+.swiper-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    overflow: hidden;
+    background: url("../img/bg.jpg") no-repeat;
+    background-size: cover;
+}
+.swiper-slide .border{
+    width: 50%;
+    height: 50%;
+    background: url("../img/border.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+@keyframes title{
+    from{
+        opacity: 0;
+        transform: scale(3,3);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+.page0 .border img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.page0.animate .border .title{
+    width: 250%;
+    height: auto;
+    top: -30%;
+    left: -45%;
+    animation: title 2000ms ease-in;
+}
+@keyframes left-play {
+    from{
+        left: -1000px;
+        opacity: 0;
+    }
+    to{
+        left:0;
+        opacity: 1;
+    }
+}
+@keyframes right-play {
+    from{
+        right: -1000px;
+        opacity: 0;
+    }
+    to{
+        right:0;
+        opacity: 1;
+    }
+}
+@keyframes big-play {
+    from {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(3, 3);
+        opacity: 0;
+    }
+}
+.page0.animate .border img:nth-child(1){
+    animation: left-play 600ms linear,big-play 1000ms 1800ms linear;
+}
+.page0.animate .border img:nth-child(2){
+    animation: right-play 600ms linear;
+}
+.page0.animate .border img:nth-child(3){
+    animation: left-play 800ms 300ms linear;
+}
+.page0.animate .border img:nth-child(4){
+    animation: right-play 800ms 300ms linear;
+}
+.page0.animate .border img:nth-child(5){
+    animation: left-play 1000ms 300ms linear;
+}
+.page0.animate .border img:nth-child(6){
+    animation: right-play 1000ms 300ms linear,big-play 1000ms 1500ms linear;
+}
+.page0.animate .border img:nth-child(7){
+    animation: left-play 800ms 300ms linear;
+}
+.page0.animate .border img:nth-child(8){
+    animation: right-play 800ms 300ms linear;
+}
+.page0.animate .border img:nth-child(9){
+    animation: left-play 600ms 300ms linear;
+}
+.page0.animate .border img:nth-child(10){
+    animation: right-play 600ms 300ms linear;
+}
+@keyframes momplay{
+    0%{
+        right: -300%;
+    }
+    70%{
+        right:-20%;
+    }
+    80%{
+        right:-25%;
+    }
+    90%{
+        right:-15%;
+    }
+    100%{
+        right:-20%;
+    }
+}
+@keyframes meplay{
+    0%{
+        left: 300%;
+    }
+    70%{
+        left: -50%;
+    }
+    80%{
+        left:-45%
+    }
+    90%{
+        left:-55%;
+    }
+    100%{
+        left: -50%;
+    }
+}
+@keyframes adaplay{
+    0%{
+        right: -300%;
+    }
+    70%{
+        right:-30%;
+    }
+    80%{
+        right:-35%;
+    }
+    90%{
+        right:-25%;
+    }
+    100%{
+        right:-30%;
+    }
+}
+@keyframes phoneplay{
+    0%{
+        left: 300%;
+        transform: rotate(0deg);
+    }
+    70%{
+        left: 0;
+        transform: rotate(360deg);
+    }
+    80%{
+        left:-5%;
+    }
+    90%{
+        left:5%;
+    }
+    100%{
+        left: 0;
+    }
+}
+@keyframes bloodplay{
+    from{
+        transform: scale(0.1,0.1);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}
+.page1 img{
+    position: absolute;
+    bottom: 0;
+}
+.page1.animate .title{
+    width: 150%;
+    height: auto;
+    top: -25%;
+    left: -30%;
+    animation: title 1000ms ease-in;
+}
+.page1.animate .mom{
+    right: -20%;
+    animation: momplay 700ms linear;
+}
+.page1.animate .ada{
+    transform: rotate(45deg);
+    right: -30%;
+    bottom: 50%;
+    animation: adaplay 800ms linear;
+}
+.page1.animate .me{
+    left: -50%;
+    animation: meplay 600ms linear;
+}
+.page1.animate .phone{
+    left: 0;
+    animation: phoneplay 1200ms linear;
+}
+.page1.animate .blood{
+    bottom:50%;
+    left: 30%;
+    animation: bloodplay 500ms linear;
+}
+
+@keyframes mom2{
+    from{
+        right: 200%;
+    }
+    to{
+        right:40%;
+    }
+}
+@keyframes girl{
+    from{
+        right: -200%;
+    }
+    to{
+        right:-20%;
+    }
+}
+@keyframes egg{
+    from{
+        opacity: 0;
+        transform: scale(0,0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+}
+@keyframes thunder{
+    0%{
+        opacity: 0;
+        right: 92%;
+    }
+    50%{
+        opacity: 0.5;
+        right: 90%;
+    }
+    100%{
+        opacity: 1;
+        right: 88%;
+    }
+}
+.page2 img{
+    position: absolute;
+    bottom: 0;
+}
+.page2.animate .title{
+    width: 150%;
+    height: auto;
+    top: -25%;
+    left: -25%;
+    animation: title 1000ms ease-in;
+}
+.page2.animate .mom{
+    right:40%;
+    bottom: -10%;
+    animation: mom2 500ms linear;
+}
+.page2.animate .girl{
+    right: -20%;
+    animation: girl 500ms linear;
+}
+.page2.animate .egg{
+    right: 90%;
+    bottom: 20%;
+    animation: egg 1200ms linear;
+}
+.page2.animate .thunder{
+    right:90%;
+    bottom: 40%;
+    animation: thunder 300ms 1000ms linear alternate infinite;
+}
+@keyframes imgplay{
+    from{
+        transform: translate(-500px,0);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+@keyframes baoo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes soul{
+    from{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(2,2);
+    }
+}
+.page3.animate img{
+    position: absolute;
+    bottom: 0;
+    animation: imgplay 500ms linear;
+}
+.page3.animate .title{
+    width: 150%;
+    height: auto;
+    top: -25%;
+    left: -25%;
+    animation: title 1000ms ease-in;
+}
+.page3 .mom{
+    left: -70%;
+}
+.page3.animate .baoo{
+    left: -20%;
+    bottom: 40%;
+    transform: rotate(-15deg);
+    animation: baoo 1000ms;
+}
+.page3 .boy{
+    left: 10%;
+}
+.page3.animate .soul{
+    left: 10%;
+    animation:imgplay 200ms, soul 2000ms infinite;
+}
+@keyframes qigong{
+    from{
+        transform: translate(1000px,0);
+    }
+    to{
+        transform: translate(0,0);
+    }
+}
+.page4 img{
+    position: absolute;
+    bottom: 0;
+}
+.page4.animate .title{
+    width: 150%;
+    height: auto;
+    top: -20%;
+    left: -25%;
+    animation: title 1000ms ease-in;
+}
+.page4.animate .mom{
+    left: -50%;
+    bottom: -10%;
+    animation: qigong 800ms ease-out;
+}
+.page4.animate .girl{
+    left: -100%;
+    bottom: 3%;
+    animation: qigong 800ms ease-out;
+}
+.page4.animate .qigong{
+    bottom: 15%;
+    animation: qigong 800ms ease-out;
+}
+.page4.animate .qigong-after{
+    bottom: 35%;
+    left: -70%;
+    animation: qigong 800ms ease-out;
+}
+.page4.animate .bg{
+    bottom: 10%;
+    animation: qigong 1000ms ease-in;
+}
+.page4.animate .bakoko{
+    bottom: 50%;
+    left: 60%;
+    transform: rotate(45deg);
+    animation: qigong 1200ms linear;
+}
+
+.page5 img{
+    position: absolute;
+    bottom: 0;
+}
+@keyframes up{
+    from{
+        bottom: -1000px;
+    }
+    to{
+        bottom: 0;
+    }
+}
+@keyframes autoshow{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes sport{
+    0%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(1px,1px);
+    }
+    50%{
+        transform: translate(-1px,-1px);
+    }
+    75%{
+        transform: translate(1px,1px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+@keyframes titleup{
+    0%{
+        top: 300%;
+    }
+    60%{
+        top: -35%;
+    }
+    70%{
+        top: -30%;
+    }
+    80%{
+        top: -35%;
+    }
+    90%{
+        top:-40%;
+    }
+    100%{
+        top: -35%;
+    }
+}
+.page5.animate .title{
+    width: 150%;
+    height: auto;
+    top: 300%;
+    left: -35%;
+    animation: titleup 500ms 1000ms ease-in;
+    animation-fill-mode: forwards;
+}
+.page5.animate .energy{
+    width: 120%;
+    left: -10%;
+    opacity: 0;
+    animation:autoshow 2500ms 500ms ease-out;
+    animation-fill-mode: forwards;
+}
+.page5.animate .cloud{
+    left: -30%;
+    opacity: 0;
+    animation:autoshow 2500ms 1000ms ease-out,soprt 200ms infinite;
+    animation-fill-mode: forwards;
+}
+.page5.animate .boom{
+    bottom: 30%;
+    left: -30%;
+    opacity: 0;
+    transform: rotate(-20deg);
+    animation:autoshow 1000ms 1500ms ease-in,sport 200ms infinite;
+    animation-fill-mode: forwards;
+}
+.page5.animate .mom{
+    left: 15%;
+    animation: up 500ms ease-out,sport 200ms infinite;
+}
+
+.page6 {
+    position: relative;
+}
+@keyframes yousee{
+    0%{
+        right:-300%;
+    }
+    60%{
+        right: 0;
+    }
+    70%{
+        right: 5%;
+    }
+    80%{
+        right: 0;
+    }
+    90%{
+        right: -5%;
+    }
+    100%{
+        right: 0;
+    }
+}
+.page6.animate .finalborder{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    width: 40%;
+    height: 30%;
+}
+.page6.animate .mom{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: yousee 500ms ease-in;
+}
+.page6.animate .title{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    opacity: 0;
+    animation: autoshow 1000ms 500ms; 
+    animation-fill-mode: forwards;
+}
+.page6 .text{
+    background: #fff;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 90%;
+}
+.page6 .logo{
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    display: block;
+}
+.page6 p{
+    padding: 0 10%;
+    text-align: justify;
+}
+.page6 .erweima{
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.page6 span{
+    font-size: 14px;
+    color: brown;
+    padding: 0 10%;
+    display: block;
+}
+
+.page7.animate .text{
+    width: 90%;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: egg 1000ms;
+    background: #fff;
+    border: 2px solid #000;
+    padding: 10% 0;
+}
+.page7 p{
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 10%;
+    text-align: right;
+    bottom: 0;
+}
+
+
+
+
+
+
+
