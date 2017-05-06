@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('body').css({width:$(window).width(),height:$(window).height()});
+    $('.music')[0].play();
 });
 $('#musicbtn').click(function(){
     if($(this).hasClass("play")){
